@@ -24,6 +24,19 @@ class file {
         return path.join(config.fileRootPath, dirOne, dirTwo, dirThree, dirFour)
     }
 
+    /**
+     * 解析路径
+     * @param pictureMd5str
+     * @returns {Promise.<void>}
+     */
+    static parserDirector(pictureMd5str) {
+        const dirOne = pictureMd5str.substring(0, 2)
+        const dirTwo = pictureMd5str.substring(2, 4)
+        const dirThree = pictureMd5str.substring(4, 6)
+        const dirFour = pictureMd5str.substring(6, pictureMd5str.length)
+        return path.join(config.fileRootPath, dirOne, dirTwo, dirThree, dirFour)
+    }
+
     static async fileIsExists(picturePath) {
         let exists = null
         try {
@@ -49,4 +62,5 @@ class file {
 }
 
 export default file
+
 

@@ -5,7 +5,7 @@ import config from './config'
 
 const app = new Koa()
 
-app.use(koaBody({multipart: true}))
+app.use(koaBody({multipart: true, strict: false}))
 app.use(router.routes())
 
 if (!module.parent) app.listen(config.port)
