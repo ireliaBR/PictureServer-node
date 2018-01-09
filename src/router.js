@@ -11,7 +11,7 @@ router.get('/', async (ctx) => {
     ctx.body = 'welcome picture server'
 })
 
-router.post('/upload', upload.picture)
-router.get('/resource/:filename', resource.picture)
+router.post('/upload', upload.picture.bind(upload))
+router.get('/resource/:filename', resource.picture.bind(resource))
 
 export default router

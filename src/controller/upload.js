@@ -17,7 +17,7 @@ export default class {
 
         //创建文件夹
         let picPath = await file.createDirectory(md5str)
-        picPath = path.join(picPath, `origin.${info.format.toLowerCase()}`)
+        picPath = path.join(picPath, 'origin')
         //保存图片
         const picIsExist = await file.fileIsExists(picPath)
         if (!picIsExist) {

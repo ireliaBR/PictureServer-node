@@ -17,7 +17,7 @@ class md5 {
                 md5sum.update(chunk)
             })
             stream.on('end', () => {
-                let str = md5sum.digest('hex').toUpperCase()
+                let str = md5sum.digest('hex').toLowerCase()
                 resolve(str)
             })
         })

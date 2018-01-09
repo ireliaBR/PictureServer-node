@@ -14,14 +14,14 @@ describe('resource', () => {
 
         it('picture not found', done => {
             request
-                .get('/resource/C7EE91B33FAE5EFAE45AF58088297E62.png')
+                .get('/resource/c7ee91b33fae5efae45af58088297e62')
                 .expect('picture not found')
                 .expect(404, done)
         })
 
-        it('success', (done) => {
+        it('origin picture success', (done) => {
             request
-                .get('/resource/C7EE91B33FAE5EFAE45AF58088297E60.png')
+                .get('/resource/c7ee91b33fae5efae45af58088297e60')
                 .expect('Content-Type', 'image/png')
                 .expect(200, done)
         })
